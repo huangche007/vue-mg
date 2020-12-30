@@ -1,5 +1,5 @@
 // 所有生产环境
-const prodPlugin = [['@babel/plugin-proposal-pipeline-operator', { "proposal": "minimal" }]]
+const prodPlugin = [['@babel/plugin-proposal-pipeline-operator', { 'proposal': 'minimal' }]]
 
 if (process.env.NODE_ENV === 'production') {
   // 如果是生产环境，则自动清理掉打印的日志，但保留error 与 warn
