@@ -1,9 +1,12 @@
 'use strict'
 const path = require('path')
+const packageName = require('./package.json').name
 const arrServers = ['/platform-user']
+
 const proxyObj = {}
 arrServers.forEach((value) => {
   proxyObj[value] = {
+    // your front-back dev server or prod server address
     target: 'https://platform-test.moguyun.com',
     changeOrigin: true,
     pathRewrite: {
@@ -23,7 +26,7 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
-const name = '基金PK' // page title
+const name = packageName || '项目名称' // page title
 
 // If your port is set to 80,
 // use administrator privileges to execute the command line.
