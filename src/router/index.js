@@ -8,8 +8,12 @@ const mRoutes = [
     redirect: '/home'
   },
   {
-    path: '/home',
+    path: '/hello',
     component: () => import('@/components/HelloWorld')
+  },
+  {
+    path: '/home',
+    component: () => import('@/views/Home')
   }
 ]
 
